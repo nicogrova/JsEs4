@@ -9,20 +9,39 @@
     <h1>Es4</h1>
 
     <div>
-        <script src="es4.js"></script>
+
         <label for="n1">primo numero:</label>
         <input type="number" id="n1" name="n1">
         <label for="n2">secondo numero:</label>
         <input type="number" id="n2" name="n2">
     </div>
-    <br>
-    <input type="button" value="+" />
-    <input type="button" value="-" />
-    <input type="button" value="*" />
-    <input type="button" value="/" />
 
-    <script type="text/javascript">
-        
+    <button id="btn1">+</button>
+    <button id="btn2">-</button>
+    <button id="btn3">*</button>
+    <button id="btn4">/</button>
+    <span id="span1"></span>
+    <br>
+    <script src="es4.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"></script>
+    <script>
+        $('<button id=\"btn1\"></button>').on("click", function () {
+
+            $("body").append($("#span1").html(parseInt($("#n1").val()) + parseInt($("#n2").val())));
+        });
+        $('<button id=\"btn2\"></button>').on("click", function () {
+
+            $("body").append($("#span1").html(parseInt($("#n1").val()) - parseInt($("#n2").val())));
+        });
+        $('<button id=\"btn3\"></button>').on("click", function () {
+
+            $("body").append($("#span1").html(parseInt($("#n1").val()) + parseInt($("#n2").val())));
+        });
+        $('<button id=\"btn4\"></button>').on("click", function () {
+
+            $("body").append($("#span1").html(parseInt($("#n1").val()) + parseInt($("#n2").val())));
+        });
+
     </script>
 
 </body>
